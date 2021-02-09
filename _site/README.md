@@ -8,8 +8,9 @@ Welcome
 
 博客的创建目的有二，一是为了记录自己在新阶段的所学、所思、所想（以及遇到的各种bug），以便日后查阅和总结；另外可以顺便学习一些编程语言的“边角料”。
 
-最后，博客主页搭建主要是基于gabriel-chen所发布的Jekyll theme, Nice Blog (https://github.com/gabriel-chen/Nice_Blog)，感谢 Nice Blog.  如果您也喜欢，欢迎在上述网址给原作者star和fork。
+最后，博客主页搭建主要是基于gabriel-chen所发布的Jekyll theme, Nice Blog (https://github.com/gabriel-chen/Nice_Blog)。 在此致谢Nice Blog. 如果您也喜欢，欢迎在上述网址给原作者star和fork。
 
 
 Lu Nie Blog
+
 ========

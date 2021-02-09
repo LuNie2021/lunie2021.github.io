@@ -4,10 +4,10 @@
     <title>Lu Nie Blog</title>
     <description>A Simple Persoanl Blog. # this means to ignore newlines until &quot;baseurl:&quot;
 </description>
-    <link>https://github.com/LuNie2021/lunie2021.github.io/</link>
-    <atom:link href="https://github.com/LuNie2021/lunie2021.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 09 Feb 2021 13:37:04 +0800</pubDate>
-    <lastBuildDate>Tue, 09 Feb 2021 13:37:04 +0800</lastBuildDate>
+    <link>/lunie2021.github.io/</link>
+    <atom:link href="/lunie2021.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 09 Feb 2021 13:51:49 +0800</pubDate>
+    <lastBuildDate>Tue, 09 Feb 2021 13:51:49 +0800</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
@@ -28,8 +28,8 @@
 
 </description>
         <pubDate>Mon, 08 Feb 2021 00:00:00 +0800</pubDate>
-        <link>https://github.com/LuNie2021/lunie2021.github.io/jekyll/Markdown.html</link>
-        <guid isPermaLink="true">https://github.com/LuNie2021/lunie2021.github.io/jekyll/Markdown.html</guid>
+        <link>/lunie2021.github.io/jekyll/Markdown.html</link>
+        <guid isPermaLink="true">/lunie2021.github.io/jekyll/Markdown.html</guid>
         
         <category>markdown</category>
         
