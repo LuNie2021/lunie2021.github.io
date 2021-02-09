@@ -6,34 +6,124 @@
 </description>
     <link>/lunie2021.github.io/</link>
     <atom:link href="/lunie2021.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 09 Feb 2021 15:25:11 +0800</pubDate>
-    <lastBuildDate>Tue, 09 Feb 2021 15:25:11 +0800</lastBuildDate>
+    <pubDate>Tue, 09 Feb 2021 17:22:21 +0800</pubDate>
+    <lastBuildDate>Tue, 09 Feb 2021 17:22:21 +0800</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
     
       <item>
         <title>Markdown 基本语法</title>
-        <description>&lt;h1 id=&quot;markdown-基本语法&quot;&gt;Markdown 基本语法&lt;/h1&gt;
-
-&lt;p&gt;本文将不断整理和更新一些基本的markdown语法，用于jekyll的使用。&lt;/p&gt;
-
+        <description>&lt;p&gt;本文整理一些markdown的常用语法，以用于编写博客。&lt;/p&gt;
 &lt;blockquote&gt;
-  &lt;ul&gt;
-    &lt;li&gt;基本语法&lt;/li&gt;
-    &lt;li&gt;参考资料&lt;/li&gt;
-  &lt;/ul&gt;
+  &lt;p&gt;Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档,在2004由约翰·格鲁伯（英语：John Gruber）创建。
+Markdown 编写的文档可以导出 HTML、Word、图像、PDF、Epub 等多种格式的文档，后缀为 .md, .markdown。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;什么是-markdown&quot;&gt;什么是 Markdown&lt;/h2&gt;
-&lt;p&gt;Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档：譬如您正在阅读的这份文档。它使用简单的符号标记不同的标题，分割不同的段落，&lt;strong&gt;粗体&lt;/strong&gt; 或者 &lt;em&gt;斜体&lt;/em&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;h3 id=&quot;常用语法&quot;&gt;常用语法&lt;/h3&gt;
+  &lt;h3 id=&quot;可用编辑器&quot;&gt;可用编辑器&lt;/h3&gt;
+  &lt;h3 id=&quot;参考资料&quot;&gt;参考资料&lt;/h3&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;1-常用语法&quot;&gt;1. 常用语法&lt;/h1&gt;
+
+&lt;h3 id=&quot;字体&quot;&gt;字体&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;粗体&lt;/strong&gt;：**&lt;输入内容&gt;**&lt;/输入内容&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;斜体&lt;/strong&gt;：*&lt;输入内容&gt;*&lt;/输入内容&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;段落&quot;&gt;段落&lt;/h3&gt;
+&lt;p&gt;在行首前加#，数量对应标题的等级；
+一级段落标题： #+段落标题
+二级段落标题：##+段落标题
+三级段落标题：###+段落标题&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;或者&lt;/strong&gt;，&lt;/p&gt;
+
+&lt;p&gt;一级标题下加一行”=====”
+二级标题下加一行“—–”
+三级标题前，加”###”&lt;/p&gt;
+
+&lt;h3 id=&quot;没有序号的point&quot;&gt;没有序号的point&lt;/h3&gt;
+
+&lt;p&gt;“短横（-）空格+内容”&lt;/p&gt;
+
+&lt;p&gt;效果如下：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;point&lt;/li&gt;
+  &lt;li&gt;point&lt;/li&gt;
+  &lt;li&gt;point&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;分隔符&quot;&gt;分隔符&lt;/h3&gt;
+&lt;p&gt;“—”（上下间隔一行，否则会被识别为二级标题）&lt;/p&gt;
+
+&lt;p&gt;效果如下：&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;外链接&quot;&gt;外链接&lt;/h3&gt;
+&lt;p&gt;用法：[描述](链接地址)
+链接地址会贴在描述上。&lt;/p&gt;
+
+&lt;h3 id=&quot;插入图片&quot;&gt;插入图片&lt;/h3&gt;
+&lt;p&gt;用法：[描述](图片地址)
+链接会贴在图片上，不过暂时不清楚本地图片链接的获取。&lt;/p&gt;
+
+&lt;h3 id=&quot;highlight代码&quot;&gt;highlight代码&lt;/h3&gt;
+&lt;p&gt;用三个```,将引用的代码括起来。（英文状态下的数字1旁边的键对应的点）&lt;/p&gt;
+
+&lt;p&gt;效果如下：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;我是一行代码
+我是第二行代码
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;文字引用&quot;&gt;文字引用&lt;/h3&gt;
+&lt;p&gt;”&amp;gt;”+”引用内容”&lt;/p&gt;
+
+&lt;p&gt;效果如下：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;我有嘉宾，鼓瑟吹笙。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;todo-list&quot;&gt;Todo list&lt;/h3&gt;
+
+&lt;p&gt;代办事项用“[ ]”开头；&lt;/p&gt;
+
+&lt;p&gt;已完成用“[x]开头”&lt;/p&gt;
+
+&lt;p&gt;效果见下：(失效中)&lt;/p&gt;
+
+&lt;p&gt;[ ]  ddl快到啦&lt;/p&gt;
+
+&lt;p&gt;[ ]  ddl已经到啦&lt;/p&gt;
+
+&lt;p&gt;[x]  个人blog首发版&lt;/p&gt;
+
+&lt;h1 id=&quot;2可用编辑器&quot;&gt;2.可用编辑器&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown&quot;&gt;Cmd Markdown&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;优点是可以边敲边预览；非常适合刚接触markdown的我。&lt;/p&gt;
+
+&lt;p&gt;缺点就是需要注册，web端反应不是很快。&lt;/p&gt;
+
+&lt;p&gt;Vscode：高效快捷&lt;/p&gt;
+
+&lt;p&gt;熟悉后，可以转战vscode，编写发表一体化。&lt;/p&gt;
+
+&lt;h1 id=&quot;参考资料-1&quot;&gt;参考资料&lt;/h1&gt;
+&lt;p&gt;【1】&lt;a href=&quot;https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown&quot;&gt;Cmd Markdown操作手册&lt;/a&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Mon, 08 Feb 2021 00:00:00 +0800</pubDate>
-        <link>/lunie2021.github.io/jekyll/Markdown.html</link>
-        <guid isPermaLink="true">/lunie2021.github.io/jekyll/Markdown.html</guid>
-        
-        <category>markdown</category>
+        <pubDate>Tue, 09 Feb 2021 00:00:00 +0800</pubDate>
+        <link>/lunie2021.github.io/jekyll/markdown.html</link>
+        <guid isPermaLink="true">/lunie2021.github.io/jekyll/markdown.html</guid>
         
         <category>jekyll</category>
+        
+        <category>markdown</category>
         
         
         <category>Jekyll</category>

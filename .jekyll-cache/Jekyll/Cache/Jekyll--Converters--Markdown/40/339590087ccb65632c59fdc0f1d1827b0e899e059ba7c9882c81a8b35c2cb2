@@ -1,0 +1,107 @@
+I"h<p>本文整理一些markdown的常用语法，以用于编写博客。</p>
+<blockquote>
+  <p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档,在2004由约翰·格鲁伯（英语：John Gruber）创建。
+Markdown 编写的文档可以导出 HTML、Word、图像、PDF、Epub 等多种格式的文档，后缀为 .md, .markdown。</p>
+</blockquote>
+
+<hr />
+
+<blockquote>
+  <ul>
+    <li>常用语法</li>
+    <li>字体</li>
+    <li>段落标题</li>
+    <li>分割符</li>
+    <li>外连接</li>
+    <li>插入图片
+      <ul>
+        <li>highlight代码</li>
+        <li>文字引用</li>
+        <li>todo list</li>
+      </ul>
+    </li>
+    <li>可用编辑器</li>
+    <li>参考资料</li>
+  </ul>
+</blockquote>
+
+<h1 id="1-常用语法">1. 常用语法</h1>
+
+<h3 id="字体">字体</h3>
+<p><strong>粗体</strong>：**<输入内容>**
+**斜体**：*<输入内容>*</输入内容></输入内容></p>
+
+<h3 id="段落">段落</h3>
+<p>在行首前加#，数量对应标题的等级；
+一级段落标题： #+段落标题
+二级段落标题：##+段落标题
+三级段落标题：###+段落标题</p>
+
+<p><strong>或者</strong>，</p>
+
+<p>一级标题下加一行”=====”
+二级标题下加一行“—–”
+三级标题前，加”###”</p>
+
+<h3 id="没有序号的point">没有序号的point</h3>
+
+<p>“短横（-）空格+内容”
+效果如下：</p>
+
+<ul>
+  <li>point</li>
+  <li>point</li>
+  <li>point</li>
+</ul>
+
+<h3 id="分隔符">分隔符</h3>
+<p>“—”（上下间隔一行，否则会被识别为二级标题）
+效果如下：</p>
+
+<hr />
+
+<h3 id="外链接">外链接</h3>
+<p>用法：[描述](链接地址)
+链接地址会贴在描述上。</p>
+
+<h3 id="插入图片">插入图片</h3>
+<p>用法：[描述](图片地址)
+链接会贴在图片上，不过暂时不清楚本地图片链接的获取。</p>
+
+<h3 id="highlight代码">highlight代码</h3>
+<p>用三个```,将引用的代码括起来。（英文状态下的数字1旁边的键对应的点）</p>
+
+<p>效果如下：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>我是一行代码
+我是第二行代码
+</code></pre></div></div>
+<h3 id="文字引用">文字引用</h3>
+<p>”&gt;”+”引用内容”</p>
+
+<p>效果如下：</p>
+
+<blockquote>
+  <p>我有嘉宾，鼓瑟吹笙。</p>
+</blockquote>
+
+<h3 id="todo-list">Todo list</h3>
+<p>代办事项用“[ ]”开头；
+已完成用“[x]开头”</p>
+
+<p>效果见下：(失效中)
+[ ]  ddl快到啦
+[ ]  ddl已经到啦
+[x]  个人blog首发版</p>
+
+<h1 id="2可用编辑器">2.可用编辑器</h1>
+<p><a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown">Cmd Markdown</a>
+优点是可以边敲边预览；非常适合刚接触markdown我。</p>
+
+<p>缺点就是需要注册，web端反应不是很快。</p>
+
+<p>Vscode 
+熟悉后，可以转战vscode，编写发表一体化。</p>
+<h1 id="3参考资料">3.参考资料</h1>
+<p>【1】<a href="https://www.zybuluo.com/mdeditor?url=https://www.zybuluo.com/static/editor/md-help.markdown">Cmd Markdown操作手册</a></p>
+
+:ET
