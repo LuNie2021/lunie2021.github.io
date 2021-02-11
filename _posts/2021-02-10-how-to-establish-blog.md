@@ -149,7 +149,7 @@ git remote set-url origin https://github.com/username/username.github.io.git
 git push -u origin master
 ```
 # 安装过程遇到的各种坑
-> 1. 如果直接用homebrew官网提供的语句在终端中运行，会出现connect failed 报错
+> 如果直接用homebrew官网提供的语句在终端中运行，会出现connect failed 报错
 
 原因：因为“你懂的”原因，官网的域名被“污染”。因此，需要用国内的镜像网站上的安装源。
 
@@ -165,13 +165,13 @@ git push -u origin master
 
 最后，如果显示 already up-to-date. 表示成功。
 
-> 2. 安装过程报错：
+> 安装过程报错：
 Error: Fetching /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core failed! ==> Homebrew has enabled anonymous aggregate formula and cask analytics. Read the analytics documentation (and how to opt-out) here: https://docs.brew.sh/Analytics
 No analytics have been recorded yet (nor will be during this `brew` run).
 
 解决：参照官网提示 https://docs.brew.sh/Analytics，将Google analysis 功能解除，即可。
 
-> 3. (sudo) gem Jekyll成功后，输入“Jekyll -v”检查，发现Jekyll未能成功安装。
+> (sudo) gem Jekyll成功后，输入“Jekyll -v”检查，发现Jekyll未能成功安装。
 
 原因：升级了macOS Catalina，新系统的shell已经更换为zsh。导致之前的安装都是在bash下进行的，zsh并没有完成。
 发现这个是因为terminal中的提示：
@@ -189,7 +189,7 @@ step 1
 
 step 2: 当terminal进入zsh界面后，确认homebrew, ruby 是否安装，接着重新安装Jekyll 
 
-> 4. Jekyll serve时，出现…./Users/apple/.local/share/gem/ruby/3.0.0/gems/jekyll-4.2.0/lib/jekyll/commands/serve/servlet.rb:3:in `require': cannot load such file -- webrick (LoadError)
+> Jekyll serve时，出现…./Users/apple/.local/share/gem/ruby/3.0.0/gems/jekyll-4.2.0/lib/jekyll/commands/serve/servlet.rb:3:in `require': cannot load such file -- webrick (LoadError)
 
 原因：运行serve时，找不到webrick 文件。这是因为新版的 Ruby-3-0-0 不再包含webrick 文件。
 
@@ -201,13 +201,13 @@ jekyll build
 ```
 [点击参考](https://github.com/jekyll/jekyll/issues/8523)
 
-> 5. Not Found: /favicon.ico 
+> Not Found: /favicon.ico 
 
 原因：文件中缺少网站标识图片，可以不管，也可以提供。
 [点击参考](https://blog.csdn.net/weixin_43972292/article/details/90216241)
 
 
-> 6. git push后，显示everything up-to-data, GitHub仓库并没有更新。
+> git push后，显示everything up-to-data, GitHub仓库并没有更新。
 
 原因：没有使用GitHub的专用存储语句；
 
@@ -223,7 +223,7 @@ Jekyll预览无误后，输入：
  #上传至远端仓库，出现master -> master 表示上传成功；
  git push origin master 
 ```
-> 7. 网站点击文章内对应的标签，直接跳转至GitHub仓库的tags页面，而不是blog内的tag页面；
+> 网站点击文章内对应的标签，直接跳转至GitHub仓库的tags页面，而不是blog内的tag页面；
 
 原因：layout中关于post的设置里，tag跳转给的链接如下：
 “\<a class="post-tags-item" href="{{ site.url }}{{ site.baseurl }}/tags/">{{ tag }}</a>”；显然，"site.url.site.baseurl.tag"这个路径指向的就是github仓库的tags;
