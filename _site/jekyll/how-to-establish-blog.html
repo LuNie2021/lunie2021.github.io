@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- CSS -->
+
+  <link rel="stylesheet" href="/lunie2021.github.io/css/main.css">
+  <link rel="canonical" href="/lunie2021.github.io/jekyll/how-to-establish-blog.html">
+  <link rel="alternate" type="application/rss+xml" title="Lu Nie Blog" href="/lunie2021.github.io/feed.xml">
+
+<!-- Google font -->
+
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Noto Sans">
+
+<!-- font awesome -->
+
+<link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+
+</head>
+
+
+  
+
+  
+
+  </head>
+
+  <body>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>将Blog放进冰箱拢共分几步？</title>
+  <meta name="description" content="本文旨在证明一个啥也不懂的人也能搭建个人博客。">
+</head>
+
+
+  <div class="wrapper">
+          <header class="post-header">
+
+    <center><div class="post-title" itemprop="name headline">将Blog放进冰箱拢共分几步？</div>
+
+		<div class="post-meta"><i class="fa fa-calendar-o"></i> <time datetime="10 Feb 2021" itemprop="datePublished">Feb 10 2021</time>
+
+		&nbsp;&nbsp;•&nbsp;&nbsp;<i class="fa fa-user-secret"></i> <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Lu Nie</span>
+        
+		<br>
+		<i class="fa fa-eye"></i> <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-pulse"></i></span>˚C</span>
+	</div>
+
+        
+        <div class="post-tags">
+        
+		<a class="post-tags-item" href="/lunie2021.github.io/tags/">jekyll</a>
+        
+		<a class="post-tags-item" href="/lunie2021.github.io/tags/">Blog</a>
+        
+	</div>
+    </center>
+    
+</header>
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="post-content">
+    <center>
+	
+	<p>基于 jekyll + GitHub Pages的个人博客搭建</p>
+	
+    </center>
+</div>
+
+<div id="category"></div>
+
+<div class="post-content" itemprop="articleBody">
+    <p>本文旨在证明一个啥也不懂的人也能搭建个人博客。</p>
+
+<blockquote>
+  <h3 id="前情提要">前情提要</h3>
+  <h3 id="主要步骤">主要步骤</h3>
+  <h3 id="大概率会遇到的坑">大概率会遇到的坑</h3>
+  <h3 id="参考资料">参考资料</h3>
+</blockquote>
+
+<h1 id="前情提要-1">前情提要</h1>
+
+<p><strong>操作系统</strong>：macOS Catalina</p>
+
+<p><strong>Ruby Version</strong>: 3.0.0</p>
+
+<p><strong>Jekyll Version</strong>: 4.2.0</p>
+
+<blockquote>
+  <p>为什么要用github pages 搭建个人博客？</p>
+</blockquote>
+
+<p>因为免费，借用github的服务器可免费搭建个人博客。并且在不同电脑端更新博客也很方便，git clone 即可。</p>
+
+<blockquote>
+  <p>为啥用Jekyll？</p>
+</blockquote>
+
+<p>因为Jekyll有很多好看的主题，并且可以实现静态网页预览，这可以使用户更加专注在内容本身，而不是花枝招展复杂的代码。</p>
+
+<h1 id="关键步骤">关键步骤</h1>
+
+<ul>
+  <li>准备前提环境</li>
+  <li>安装Jekyll</li>
+  <li>选择主题，搭建博客</li>
+</ul>
+
+<h2 id="1-环境配置">1 环境配置</h2>
+
+<p>安装 Command Line Tools</p>
+
+<p>打开terminal，运行：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xcode-select --install
+</code></pre></div></div>
+
+<p>用Homebrew安装Ruby：Jekyll需要在Ruby环境下运行，因此首先安装Ruby.</p>
+
+<p>安装 Homebrew</p>
+
+<p>如果用官网的方式，大概率是显示连接失败，无法安装（因为你懂的原因），需要更换国内的源。
+<a href="https://zhuanlan.zhihu.com/p/111014448">详情点击此处。</a></p>
+
+<p>terminal输入：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
+</code></pre></div></div>
+
+<p>安装Ruby</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install ruby 
+</code></pre></div></div>
+<p>将ruby路经添加到shell configutation</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># If you're using Zsh
+echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' &gt;&gt; ~/.zshrc
+
+# If you're using Bash
+echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' &gt;&gt; ~/.bash_profile
+</code></pre></div></div>
+
+<p>另，如果有多个版本的Ruby需要安装，可以用rbenv来管理。</p>
+
+<h2 id="2-安装-jekyll">2 安装 jekyll</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 安装bundler和 jekyll 
+
+gem install --user-install bundler jekyll
+
+# 将X.X 替换为当前使用的ruby版本（ruby -v 查看）
+
+echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' &gt;&gt; ~/.zshrc 
+</code></pre></div></div>
+<p>至此，jekyll 安装完成！！</p>
+
+<p>可输入 jekyll -v 确认。</p>
+
+<p>接下来就是创建一个新blog, 可以自己直接新建，也可以用别人的主题模板。</p>
+
+<hr />
+
+<h2 id="3-独立自主创建一个blog">3. 独立自主创建一个blog</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll new myblog 
+
+cd myblog
+
+# build网站，并在本地建一个服务器
+bundle exec jekyll serve 
+</code></pre></div></div>
+<p>最后terminal会显示一个站点，可用浏览器打开。用于网站预览。</p>
+
+<p>预览无误，推送（合并到“使用模板搭建”部分细讲）。</p>
+
+<h2 id="4-使用模板搭建一个blog">4. 使用模板搭建一个blog</h2>
+<ol>
+  <li>
+    <p>搭建：在github建一个自己用户名的仓库: username.github.io</p>
+  </li>
+  <li>
+    <p>clone： 
+选中的jekyll theme clone到本地 (也可根据模板作者在 READ ME中提示的方式进行)；另再将自己的仓库clone到本地，作为本地仓库。</p>
+  </li>
+  <li>
+    <p>推送：在本地根据自己需求修改好后，push到远端 username.github.io</p>
+  </li>
+</ol>
+
+<h3 id="41-搭建">4.1 搭建</h3>
+<p>在GitHub新建一个仓库。</p>
+<h3 id="42-clone">4.2 clone</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># git clone + 站点地址的形式
+git clone https://github.com/username/username.github.io.git
+</code></pre></div></div>
+<p>修改模板文件夹的信息，基本修改 _config.yml 里的个人信息即可。</p>
+
+<p>了解了整个文件夹内容后，可以修改任何信息。</p>
+<h3 id="43-push">4.3 push</h3>
+<p>push之前一定要做两步：</p>
+
+<p>$ git add .</p>
+
+<p>$ git commit -m ‘被修改过的文件名称’</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 保存修改内容
+git add .
+git commit -m 'lunie2021.github.io'
+# 确认远端仓库是否为自己的站点，还是模板所在站点
+git remote -v
+# 修改为自己站点
+git remote set-url origin https://github.com/username/username.github.io.git
+# push
+git push -u origin master
+</code></pre></div></div>
+<h1 id="安装过程遇到的各种坑">安装过程遇到的各种坑</h1>
+<blockquote>
+  <ol>
+    <li>如果直接用homebrew官网提供的语句在终端中运行，会出现connect failed 报错</li>
+  </ol>
+</blockquote>
+
+<p>原因：因为“你懂的”原因，官网的域名被“污染”。因此，需要用国内的镜像网站上的安装源。</p>
+
+<p>解决：</p>
+
+<p>国内镜像安装方式： https://zhuanlan.zhihu.com/p/111014448</p>
+
+<p>简单来说，运行自动脚本，选择一个安装源即可，接着就自动安装。</p>
+
+<p>安装脚本：/bin/zsh -c “$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)”</p>
+
+<p>卸载脚本：/bin/zsh -c “$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/HomebrewUninstall.sh)”</p>
+
+<p>最后，如果显示 already up-to-date. 表示成功。</p>
+
+<blockquote>
+  <ol>
+    <li>安装过程报错：
+Error: Fetching /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core failed! ==&gt; Homebrew has enabled anonymous aggregate formula and cask analytics. Read the analytics documentation (and how to opt-out) here: https://docs.brew.sh/Analytics
+No analytics have been recorded yet (nor will be during this <code class="language-plaintext highlighter-rouge">brew</code> run).</li>
+  </ol>
+</blockquote>
+
+<p>解决：参照官网提示 https://docs.brew.sh/Analytics，将Google analysis 功能解除，即可。</p>
+
+<blockquote>
+  <ol>
+    <li>(sudo) gem Jekyll成功后，输入“Jekyll -v”检查，发现Jekyll未能成功安装。</li>
+  </ol>
+</blockquote>
+
+<p>原因：升级了macOS Catalina，新系统的shell已经更换为zsh。导致之前的安装都是在bash下进行的，zsh并没有完成。
+发现这个是因为terminal中的提示：</p>
+
+<p>The default interactive shell is now zsh. 
+To update your account to use zsh, please run <code class="language-plaintext highlighter-rouge">chsh -s /bin/zsh</code>. 
+For more details, please visit https://support.apple.com/kb/HT208050.</p>
+
+<p>解决方法：
+解决方法：</p>
+
+<p>step 1</p>
+<ol>
+  <li>不使用bash，切换zsh，chsh -s /bin/zsh命令切换即可。（我使用的1）</li>
+  <li>继续使用bash。-输入vim ./.bash_profile 回车，然后就打开了bash_profile文件。-点击i建进入编辑状态，添加 export BASH_SILENCE_DEPRECATION_WARNING=1，这样一个环境变量就添加上了。-点击esc退出编辑状态，输入:wq回车保存退出。-输入source ～/.bash_profile ，让配置文件在修改后立即生效。</li>
+</ol>
+
+<p>step 2: 当terminal进入zsh界面后，确认homebrew, ruby 是否安装，接着重新安装Jekyll</p>
+
+<blockquote>
+  <ol>
+    <li>Jekyll serve时，出现…./Users/apple/.local/share/gem/ruby/3.0.0/gems/jekyll-4.2.0/lib/jekyll/commands/serve/servlet.rb:3:in `require’: cannot load such file – webrick (LoadError)</li>
+  </ol>
+</blockquote>
+
+<p>原因：运行serve时，找不到webrick 文件。这是因为新版的 Ruby-3-0-0 不再包含webrick 文件。</p>
+
+<p>解决方法：自己安装。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle add webrick
+# 重新jekyll build 
+jekyll build
+</code></pre></div></div>
+<p><a href="https://github.com/jekyll/jekyll/issues/8523">点击参考</a></p>
+
+<blockquote>
+  <ol>
+    <li>Not Found: /favicon.ico </li>
+  </ol>
+</blockquote>
+
+<p>原因：文件中缺少网站标识图片，可以不管，也可以提供。
+<a href="https://blog.csdn.net/weixin_43972292/article/details/90216241">点击参考</a></p>
+
+<blockquote>
+  <ol>
+    <li>git push后，显示everything up-to-data, GitHub仓库并没有更新。</li>
+  </ol>
+</blockquote>
+
+<p>原因：没有使用GitHub的专用存储语句；</p>
+
+<p>解决方法：
+Jekyll预览无误后，输入：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> #将修改的内容放进storage
+ git add .  
+
+ # 提交至本地仓库
+ git commit -m '上传项目' 
+
+ #上传至远端仓库，出现master -&gt; master 表示上传成功；
+ git push origin master 
+</code></pre></div></div>
+<blockquote>
+  <ol>
+    <li>网站点击文章内对应的标签，直接跳转至GitHub仓库的tags页面，而不是blog内的tag页面；</li>
+  </ol>
+</blockquote>
+
+<p>原因：layout中关于post的设置里，tag跳转给的链接如下：
+“&lt;a class=”post-tags-item” href=”/lunie2021.github.io/tags/”&gt;&lt;/a&gt;”；显然，”site.url.site.baseurl.tag”这个路径指向的就是github仓库的tags;</p>
+
+<p>解决方法：
+将路径改为博客内的tag位置；_congif.yml中url留白；</p>
+
+<h1 id="参考资料-1">参考资料</h1>
+<p>【1】<a href="https://jekyllrb.com/">jekyll官方网站</a></p>
+
+<p>【2】<a href="https://www.bilibili.com/video/BV14x411t7ZU?from=search&amp;seid=7751760845604383004">指路b站</a></p>
+
+<p>【3】<a href="https://www.bilibili.com/video/BV1rC4y1878Y/?spm_id_from=333.788.recommend_more_video.0">指路b站</a></p>
+
+<p>【4】<a href="https://www.cnblogs.com/A--G/p/5112619.html">利用模板搭建jekyll</a></p>
+
+<p>【5】<a href="https://www.zhihu.com/question/20223939">还不错的主题推荐</a></p>
+
+
+</div>
+
+<div>
+	
+	<div class="eof"></div>
+	
+</div>
+
+<div class="share">
+    <p>Share this post with: </p>
+	<a href="https://twitter.com/intent/tweet?text=将Blog放进冰箱拢共分几步？@&amp;url=/lunie2021.github.io/jekyll/how-to-establish-blog.html" class="twitter-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+    
+	<a href="https://www.facebook.com/sharer/sharer.php?u=/lunie2021.github.io/jekyll/how-to-establish-blog.html" class="facebook-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+    
+	<a href="https://plus.google.com/share?url=/lunie2021.github.io/jekyll/how-to-establish-blog.html" class="googleplus-share">
+		<span class="fa-stack fa-lg">
+			<i class="fa fa-circle fa-stack-2x"></i>
+			<i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+		</span>
+	</a>
+</div>
+
+
+<div id="disqus_thread"></div>
+
+
+ 
+</div>
+
+
+</article>
+
+  </div>
+
+</body>
+
+<foot>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <center>
+        
+		<p><a class="link" href="/lunie2021.github.io/archive/">Archive</a> /
+		<a class="link" href="/lunie2021.github.io/category/">Category</a> / 
+		<a class="link" href="/lunie2021.github.io/tags/">Tags</a> / 
+		<a class="link" href="/lunie2021.github.io/about/">About</a> /
+		<a class="link" href="/lunie2021.github.io/contact/">Contact</a>
+        </p>
+
+        <span><script>document.write(new Date().getFullYear());</script></span>
+        <span>&copy;</span>
+        
+		<a class="link" href="/lunie2021.github.io">Lu Nie</a>
+		<br>
+		<span>Theme &copy; <a class="link" href="https://gabriel-chen.github.io" target="_blank"> Gabriel</a> | </span>
+				<iframe
+			style="margin-left: 2px; margin-bottom:-5px;"
+			frameborder="0" scrolling="0" width="91px" height="20px"
+			src="https://ghbtns.com/github-btn.html?user=itisbenjamin&repo=Nice_Blog&type=star&count=true" >
+		</iframe>
+
+    </center>
+    
+  </div>
+
+</footer>
+
+    <foot>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Derictory -->
+
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <script src="http://yandex.st/highlightjs/6.2/highlight.min.js"></script>
+
+<!-- Hit analytics -->
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<!-- Directory -->
+
+<script src="/lunie2021.github.io/js/main.js"></script>
+
+</foot>
+
+
+</foot>
+
+</html>
