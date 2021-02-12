@@ -130,7 +130,7 @@ git clone https://github.com/username/username.github.io.git
 ```
 修改模板文件夹的信息，基本修改 _config.yml 里的个人信息即可。
 
-了解了整个文件夹内容后，可以修改任何信息。
+了解整个文件夹内容后，可以修改任何信息。
 ### 4.3 push
 push之前一定要做两步：
 
@@ -223,7 +223,7 @@ Jekyll预览无误后，输入：
  #上传至远端仓库，出现master -> master 表示上传成功；
  git push origin master 
 ```
-> 网站点击文章内对应的标签，直接跳转至GitHub仓库的tags页面，而不是blog内的tag页面；
+> 网站点击文章内对应的标签，直接跳转至GitHub仓库的tags页面，而不是blog内的tag页面。
 
 原因：layout中关于post的设置里，tag跳转给的链接如下：
 “\<a class="post-tags-item" href="{{ site.url }}{{ site.baseurl }}/tags/">{{ tag }}</a>”；显然，"site.url.site.baseurl.tag"这个路径指向的就是github仓库的tags;

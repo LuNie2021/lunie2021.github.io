@@ -1,4 +1,4 @@
-I"�(<p>本文旨在证明一个啥也不懂的人也能搭建个人博客。</p>
+I"/(<p>本文旨在证明一个啥也不懂的人也能搭建个人博客。</p>
 
 <blockquote>
   <h3 id="前情提要">前情提要</h3>
@@ -32,13 +32,15 @@
 <ul>
   <li>准备前提环境</li>
   <li>安装Jekyll</li>
-  <li>选择主题，搭建博客
-    <h2 id="1-环境配置">1 环境配置</h2>
-    <p>安装 Command Line Tools</p>
-  </li>
+  <li>选择主题，搭建博客</li>
 </ul>
 
+<h2 id="1-环境配置">1 环境配置</h2>
+
+<p>安装 Command Line Tools</p>
+
 <p>打开terminal，运行：</p>
+
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xcode-select --install
 </code></pre></div></div>
 
@@ -119,7 +121,7 @@ git clone https://github.com/username/username.github.io.git
 </code></pre></div></div>
 <p>修改模板文件夹的信息，基本修改 _config.yml 里的个人信息即可。</p>
 
-<p>了解了整个文件夹内容后，可以修改任何信息。</p>
+<p>了解整个文件夹内容后，可以修改任何信息。</p>
 <h3 id="43-push">4.3 push</h3>
 <p>push之前一定要做两步：</p>
 
@@ -138,9 +140,7 @@ git push -u origin master
 </code></pre></div></div>
 <h1 id="安装过程遇到的各种坑">安装过程遇到的各种坑</h1>
 <blockquote>
-  <ol>
-    <li>如果直接用homebrew官网提供的语句在终端中运行，会出现connect failed 报错</li>
-  </ol>
+  <p>如果直接用homebrew官网提供的语句在终端中运行，会出现connect failed 报错</p>
 </blockquote>
 
 <p>原因：因为“你懂的”原因，官网的域名被“污染”。因此，需要用国内的镜像网站上的安装源。</p>
@@ -158,19 +158,15 @@ git push -u origin master
 <p>最后，如果显示 already up-to-date. 表示成功。</p>
 
 <blockquote>
-  <ol>
-    <li>安装过程报错：
+  <p>安装过程报错：
 Error: Fetching /usr/local/Homebrew/Library/Taps/homebrew/homebrew-core failed! ==&gt; Homebrew has enabled anonymous aggregate formula and cask analytics. Read the analytics documentation (and how to opt-out) here: https://docs.brew.sh/Analytics
-No analytics have been recorded yet (nor will be during this <code class="language-plaintext highlighter-rouge">brew</code> run).</li>
-  </ol>
+No analytics have been recorded yet (nor will be during this <code class="language-plaintext highlighter-rouge">brew</code> run).</p>
 </blockquote>
 
 <p>解决：参照官网提示 https://docs.brew.sh/Analytics，将Google analysis 功能解除，即可。</p>
 
 <blockquote>
-  <ol>
-    <li>(sudo) gem Jekyll成功后，输入“Jekyll -v”检查，发现Jekyll未能成功安装。</li>
-  </ol>
+  <p>(sudo) gem Jekyll成功后，输入“Jekyll -v”检查，发现Jekyll未能成功安装。</p>
 </blockquote>
 
 <p>原因：升级了macOS Catalina，新系统的shell已经更换为zsh。导致之前的安装都是在bash下进行的，zsh并没有完成。
@@ -192,9 +188,7 @@ For more details, please visit https://support.apple.com/kb/HT208050.</p>
 <p>step 2: 当terminal进入zsh界面后，确认homebrew, ruby 是否安装，接着重新安装Jekyll</p>
 
 <blockquote>
-  <ol>
-    <li>Jekyll serve时，出现…./Users/apple/.local/share/gem/ruby/3.0.0/gems/jekyll-4.2.0/lib/jekyll/commands/serve/servlet.rb:3:in `require’: cannot load such file – webrick (LoadError)</li>
-  </ol>
+  <p>Jekyll serve时，出现…./Users/apple/.local/share/gem/ruby/3.0.0/gems/jekyll-4.2.0/lib/jekyll/commands/serve/servlet.rb:3:in `require’: cannot load such file – webrick (LoadError)</p>
 </blockquote>
 
 <p>原因：运行serve时，找不到webrick 文件。这是因为新版的 Ruby-3-0-0 不再包含webrick 文件。</p>
@@ -207,18 +201,14 @@ jekyll build
 <p><a href="https://github.com/jekyll/jekyll/issues/8523">点击参考</a></p>
 
 <blockquote>
-  <ol>
-    <li>Not Found: /favicon.ico </li>
-  </ol>
+  <p>Not Found: /favicon.ico </p>
 </blockquote>
 
 <p>原因：文件中缺少网站标识图片，可以不管，也可以提供。
 <a href="https://blog.csdn.net/weixin_43972292/article/details/90216241">点击参考</a></p>
 
 <blockquote>
-  <ol>
-    <li>git push后，显示everything up-to-data, GitHub仓库并没有更新。</li>
-  </ol>
+  <p>git push后，显示everything up-to-data, GitHub仓库并没有更新。</p>
 </blockquote>
 
 <p>原因：没有使用GitHub的专用存储语句；</p>
@@ -235,9 +225,7 @@ Jekyll预览无误后，输入：</p>
  git push origin master 
 </code></pre></div></div>
 <blockquote>
-  <ol>
-    <li>网站点击文章内对应的标签，直接跳转至GitHub仓库的tags页面，而不是blog内的tag页面；</li>
-  </ol>
+  <p>网站点击文章内对应的标签，直接跳转至GitHub仓库的tags页面，而不是blog内的tag页面。</p>
 </blockquote>
 
 <p>原因：layout中关于post的设置里，tag跳转给的链接如下：
